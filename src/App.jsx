@@ -1,6 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Features from "./components/Features";
@@ -10,16 +14,10 @@ import Newsletter from "./components/Newsletter";
 import Footer from "./shared/Footer";
 
 function App() {
-  useEffect(() => {
-    // Force reload page when navigating
-    if (performance.getEntriesByType("navigation")[0].type !== "reload") {
-      window.location.reload();
-    }
-  }, []);
-
   return (
     <Router>
       <Routes>
+        {/* Route for the root path */}
         <Route
           path="/"
           element={
@@ -34,7 +32,7 @@ function App() {
             </>
           }
         />
-        {/* Redirect all invalid paths to "/" */}
+        {/* Redirect all other paths to "/" */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
