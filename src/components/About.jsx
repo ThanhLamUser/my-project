@@ -15,7 +15,7 @@ const About = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/create-payment-link",
+        "https://spring-render-c3hj.onrender.com/create-payment-link",
         {
           method: "POST",
           headers: {
