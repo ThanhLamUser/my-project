@@ -4,14 +4,32 @@ import { motion } from "framer-motion";
 import { FadeIn } from "../variants";
 
 const Pricing = () => {
-  const checkOut = async () => {
-    const productData = {
-      productName: "Khóa Học Start",
-      description: "Thanh toán đơn hàng",
-      returnUrl: "https://tailwind-react-alpha.vercel.app/success",
-      cancelUrl: "https://tailwind-react-alpha.vercel.app/",
-      price: 1000,
-    };
+  const checkOut = async (count) => {
+    if (count === 1) {
+      var productData = {
+        productName: "Khóa Học Start",
+        description: "Thanh toán đơn hàng",
+        returnUrl: "https://tailwind-react-alpha.vercel.app/success",
+        cancelUrl: "https://tailwind-react-alpha.vercel.app/",
+        price: 1000,
+      };
+    } else if (count === 2) {
+      var productData = {
+        productName: "Khóa Học Advanced",
+        description: "Thanh toán đơn hàng",
+        returnUrl: "https://tailwind-react-alpha.vercel.app/success",
+        cancelUrl: "https://tailwind-react-alpha.vercel.app/",
+        price: 2000,
+      };
+    } else {
+      var productData = {
+        productName: "Khóa Học Premium",
+        description: "Thanh toán đơn hàng",
+        returnUrl: "https://tailwind-react-alpha.vercel.app/success",
+        cancelUrl: "https://tailwind-react-alpha.vercel.app/",
+        price: 3000,
+      };
+    }
 
     try {
       const response = await fetch(
@@ -25,9 +43,31 @@ const Pricing = () => {
         }
       );
 
+      console.log("Response status:", response.status); // Kiểm tra mã trạng thái
+
+      // Đọc phản hồi dưới dạng văn bản
       const textResponse = await response.text();
-      const cleanUrl = textResponse.split("?")[0]; // Bỏ query params
-      window.location.href = cleanUrl; // Chuyển hướng tới URL sạch
+      console.log("Raw response:", textResponse); // In ra phản hồi thô
+
+      //   // Kiểm tra xem phản hồi có phải là JSON không
+      //   let data;
+      //   try {
+      //     data = JSON.parse(textResponse); // Cố gắng phân tích cú pháp JSON
+      //   } catch (error) {
+      //     console.error("Lỗi phân tích cú pháp JSON:", error);
+      //     console.error("Phản hồi không hợp lệ:", textResponse);
+      //     return; // Kết thúc nếu không thể phân tích cú pháp
+      //   }
+
+      //   // Kiểm tra dữ liệu trả về
+      //   console.log("Response data:", data); // Kiểm tra dữ liệu trả về
+
+      //   // Kiểm tra xem có trường link không
+      if (textResponse) {
+        window.location.href = textResponse; // Chuyển hướng tới đường dẫn
+      } else {
+        console.error("Link không tồn tại trong dữ liệu trả về");
+      }
     } catch (error) {
       console.error("Có lỗi xảy ra:", error);
     }
@@ -36,9 +76,9 @@ const Pricing = () => {
   const [isYearly, setISYearly] = useState(false);
 
   const packages = [
-    { name: "Start", monthlyPrice: 1000, yearlyPrice: 199, description: "Đến với gói Start chỉ với 1000 VND/tháng, bạn đã có thể bắt đầu hành trình chinh phục kiến thức của mình mà không lo về chi phí! Gói này đặc biệt dành cho những ai mới bắt đầu, muốn trải nghiệm và khám phá các kiến thức nền tảng mà chúng tôi cung cấp. Dù chỉ là gói khởi động nhưng bạn sẽ nhận được:", green: rectangle18 },
-    { name: "Advance", monthlyPrice: 2000, yearlyPrice: 399, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit.", green: rectangle18 },
-    { name: "Premium", monthlyPrice: 3000, yearlyPrice: 599, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit.", green: rectangle18 },
+    { count: 1, name: "Start", monthlyPrice: 1000, yearlyPrice: 199, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit.", green: rectangle18 },
+    { count: 2, name: "Advance", monthlyPrice: 2000, yearlyPrice: 399, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit.", green: rectangle18 },
+    { count: 3, name: "Premium", monthlyPrice: 3000, yearlyPrice: 599, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit.", green: rectangle18 },
 
   ]
 
@@ -79,7 +119,7 @@ const Pricing = () => {
               <li className="flex gap-3 flex-row items-center"><img src={pkg.green} alt="" className="w-5" /> Personal advice from teachers</li>
             </ul>
             <div className="w-full mx-auto mt-8 flex items-center justify-center">
-              <button className="btnPrimary">MUA NGAY</button>
+              <button className="btnPrimary" onClick={() => checkOut(pkg.count)}>MUA NGAY</button>
             </div>
           </div>)
         }
