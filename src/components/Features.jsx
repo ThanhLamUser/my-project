@@ -13,8 +13,8 @@ const Features = () => {
             whileInView={"show"}
             viewport={{once:false,amount: 0.7}}
                 className="lg:w-1/4">
-                    <h3 className="text-2xl text-primary font-bold lg:w-1/2 mb-3">Why we are better than others</h3>
-                    <p className="text-base text-tartiary">A simple paragraph is comprised of three major components. The first sentence, which is often a declarative sentence, is called the topic sentence</p>
+                    <h3 className="text-2xl text-primary font-bold lg:w-11/12 mb-3 font-sans">LÀM THẾ NÀO ĐỂ NÓI TIẾNG ANH NHƯ NGƯỜI BẢN NGỮ</h3>
+                    <p className="text-base text-tartiary font-serif">Bạn đã học tiếng Anh nhiều năm, nhưng bạn vẫn không nói tốt. Bạn đọc tiếng Anh tốt nhưng bạn lại cảm thấy lo lắng và nhút nhát khi nói tiếng Anh. Bạn biết rất nhiều công thức ngữ pháp nhưng bạn vẫn gặp nhiều lỗi khi nói. Phát âm của bạn rất tệ. Đúng vậy không?</p>
                 </motion.div>
                 <motion.div
                  variants={FadeIn('up',0.2)}

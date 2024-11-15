@@ -8,30 +8,30 @@ const Pricing = () => {
     const [isYearly, setISYearly] = useState(false);
     
     const packages = [
-        {name: "Start", monthlyPrice: 19, yearlyPrice: 199, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit." , green: rectangle18},
-        {name: "Advance", monthlyPrice: 39, yearlyPrice: 399, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit." , green: rectangle18},
-        {name: "Premium", monthlyPrice: 59, yearlyPrice: 599, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit.", green: rectangle18 },
+        {name: "Start", monthlyPrice: 1000, yearlyPrice: 199, description: "Đến với gói Start chỉ với 1000 VND/tháng, bạn đã có thể bắt đầu hành trình chinh phục kiến thức của mình mà không lo về chi phí! Gói này đặc biệt dành cho những ai mới bắt đầu, muốn trải nghiệm và khám phá các kiến thức nền tảng mà chúng tôi cung cấp. Dù chỉ là gói khởi động nhưng bạn sẽ nhận được:" , green: rectangle18},
+        {name: "Advance", monthlyPrice: 2000, yearlyPrice: 399, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit." , green: rectangle18},
+        {name: "Premium", monthlyPrice: 3000, yearlyPrice: 599, description: "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectuer adipiscing elit.", green: rectangle18 },
 
     ]
 
     return (
-        <div className="md:px-14 p-4 max-w-s mx-auto py-10" id="pricing">
+        <div className="md:px-14 p-4 max-w-s mx-auto py-10" >
             <div className="text-center">
-                <h2 className="md:text-5xl text-3xl font-extrabold text-primary mb-2">Here are all our plans </h2>
-                <p className="text-tartiary md:w-1/3 mx-auto px-4">A simple paragraph is comprised of three major components. The which is often a declarative sentence</p>
+                <h2 className="md:text-5xl text-3xl font-extrabold text-primary mb-2 font-serif">BẢNG GIÁ CHÍNH THỨC </h2>
+                <p className="text-tartiary md:w-1/3 mx-auto px-4 font-serif">PHIÊN BẢN MỚI NHẤT 2025 - DÀNH CHO BẠN HỌC VIỆT NAM</p>
             </div>
-            <div className="mt-16 flex justify-center">
+            {/* <div className="mt-16 flex justify-center">
                 <label htmlFor="toggle" className="inline-flex items-center cursor-pointer">
-                    <span className="mr-8 text-2xl font-semibold">Monthly</span>
+                    <span className="mr-8 text-2xl font-semibold font-serif">Hàng tháng</span>
                 <div className="w-14 h-6 bg-gray-300 rounded-full transition duration-200 ease-in-out">
                     <div className={`w-6 h-6 rounded-full transition duration-200 ease-in-out ${isYearly ? "bg-primary ml-8" : "bg-gray-500 "}`}></div>
                 </div>
-                <span className="ml-8 text-2xl font-semibold">Yearly</span>
+                <span className="ml-8 text-2xl font-semibold ">Hàng năm</span>
                  </label>
                  <input type="checkbox" id="toggle" className="hidden" checked={isYearly} onChange={() => setISYearly(!isYearly)} />
-            </div> 
-           <motion.div
-                           variants={FadeIn('up',0.1)}
+            </div>  */}
+           <motion.div id="pricing"
+                           variants={FadeIn('up',0.2)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{once:false,amount: 0.7}}
@@ -39,9 +39,9 @@ const Pricing = () => {
             {
                 packages.map((pkg, index ) => <div className="border py-10 md:px-6 px-4 rounded-lg shadow-3xl" key={index}>
                     <h3 className="text-3xl font-bold text-center text-primary ">{pkg.name}</h3>
-                    <p className="text-tartiary text-center my-5">{pkg.description}</p>
+                    <p className="text-tartiary my-5 font-serif text-justify">{pkg.description}</p>
                     <p className="mt-5 text-center text-secondary text-4xl font-bold">
-                        {isYearly ? `$${pkg.yearlyPrice}` : `$${pkg.monthlyPrice}`} <span className="text-base text-tartiary font-medium">/{isYearly ? 'year' : 'month'}</span>
+                        {isYearly ? `${pkg.yearlyPrice} VND` : `${pkg.monthlyPrice} VND`} <span className="text-base text-tartiary font-medium">/{isYearly ? 'năm' : 'tháng'}</span>
                     </p>
                     <ul className="mt-4 space-y-2">
                         <li className="flex gap-3 flex-row items-center"><img src={pkg.green} alt="" className="w-5" /> Video of lessons</li>
@@ -51,7 +51,7 @@ const Pricing = () => {
                         <li className="flex gap-3 flex-row items-center"><img src={pkg.green} alt="" className="w-5" /> Personal advice from teachers</li>
                     </ul>
                     <div className="w-full mx-auto mt-8 flex items-center justify-center">
-                        <button className="btnPrimary">Get started</button>
+                        <button className="btnPrimary">MUA NGAY</button>
                     </div>
                 </div> )
             }

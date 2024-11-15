@@ -12,10 +12,10 @@ const Navbar = () => {
     }
 
     const navItems =[
-        {link:"Overview",path:"home"},
-        {link:"Feature",path:"feature"},
-        {link:"About",path:"about"},
-        {link:"Pricing",path:"pricing"}
+        {link:"Tổng quan",path:"home"},
+        {link:"Mô tả",path:"feature"},
+        {link:"Về chúng tôi",path:"about"},
+        {link:"Bảng phí",path:"pricing"}
     ]
     return (
         <>
@@ -25,14 +25,14 @@ const Navbar = () => {
                 <a href="/" ><img className='w-32 md:w-64 md:mr-12 ' src={logo} alt="logo" /></a>
                 <ul className='md:flex hidden items-center space-x-12 '>
                     {
-                        navItems.map(({link,path})=> <Link spy={true} smooth={true} activeClass='active' offset={-100} key={link} className='block hover:text-gray-500 cursor-pointer' to={path}>{link}</Link> )
+                        navItems.map(({link,path})=> <Link spy={true} smooth={true} activeClass='active' offset={-100} key={link} className='block hover:text-gray-500 cursor-pointer font-sans uppercase' to={path}>{link}</Link> )
                     }
                 </ul>
             </div>
-            <div className='md:flex flex-1 space-x-12 hidden md:fixed right-0 mr-12'>
+            {/* <div className='md:flex flex-1 space-x-12 hidden md:fixed right-0 mr-12'>
                 <a href='/' className='hidden lg:flex items-center hover:text-secondary'> <MdOutlineLanguage className='mr-2'/> Language</a>
                 <button className='bg-secondary py-2 px-4 transtion-all duration-300 rounded hover:text-white hover:bg-indigo-600 hidden lg:flex'>Sign up</button>
-            </div>
+            </div> */}
          </div>
          <div className='md:hidden'>
                 <button onClick={toggleMenu} className='text-white focus:outline-none focus:text-gray-300'>

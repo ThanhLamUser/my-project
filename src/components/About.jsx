@@ -74,17 +74,19 @@ const About = () => {
           viewport={{ once: false, amount: 0.7 }}
           className="md:w-2/5"
         >
-          <h2 className="md:text-4xl text-2xl font-bold text-primary mb-5 leading-normal">
-            We have been improving our product{" "}
-            <span className="text-secondary ">for many years</span>{" "}
+          <h2 className="md:text-4xl text-2xl font-bold text-primary mb-5 leading-normal font-sans">
+          VƯỢT QUA SỰ LO LẮNG NÓI TIẾNG ANH MỘT CÁCH{" "}
+            <span className="text-secondary ">TỰ TIN</span>{" "}
+            VÀ
+           <span className="text-secondary "> TRÔI CHẢY</span>{" "}
+
           </h2>
-          <p className="text-tartiary text-lg mb-7">
-            A good example of a paragraph contains a topic conclusion. There are
-            many different kinds of animals that live in China
+          <p className="text-tartiary text-lg mb-7 font-serif">
+          Dựa trên các nghiên cứu gần nhất và với hơn 20 năm kinh nghiệm dạy tiếng Anh của thầy A.J, Effortless English sẽ chỉ cho bạn cách để nói tiếng Anh thành công.
           </p>
-          <button className="btnPrimary" onClick={checkOut}>
+          {/* <button className="btnPrimary" onClick={checkOut}>
             Get started{" "}
-          </button>
+          </button> */}
         </motion.div>
       </div>
       <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-8">
@@ -104,15 +106,14 @@ const About = () => {
           viewport={{ once: false, amount: 0.7 }}
           className="md:w-2/5"
         >
-          <h2 className="md:text-4xl text-2xl font-bold text-primary mb-5 leading-normal">
-            You can Practice at any{" "}
-            <span className="text-secondary ">time convinent for you</span>{" "}
+          <h2 className="md:text-4xl text-2xl font-bold text-primary mb-5 leading-normal uppercase font-sans">
+          Effortless English Online Vip Program 2025 sẽ dạy bạn nói tiếng Anh thành thạo{" "}
+            <span className="text-secondary ">theo phương pháp hoàn toàn mới</span>{" "}
           </h2>
-          <p className="text-tartiary text-lg mb-7">
-            A good example of a paragraph contains a topic conclusion. There are
-            many different kinds of animals that live in China
+          <p className="text-tartiary text-lg mb-7 font-serif">
+          Bạn không cô đơn đâu. Lí do bạn gặp phải các vấn đề đó là bởi vì bạn học tiếng Anh theo các phương pháp học cũ trên trường.Hầu hết mọi người đều thất bại để có thể nói tiếng Anh nhanh, dễ dàng và tự động khi sử dụng các phương pháp cũ này.
           </p>
-          <button className="btnPrimary">Get started </button>
+          {/* <button className="btnPrimary">Get started </button> */}
         </motion.div>
       </div>
     </div>
