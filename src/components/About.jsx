@@ -4,56 +4,7 @@ import { motion } from "framer-motion";
 import { FadeIn } from "../variants";
 
 const About = () => {
-  const checkOut = async () => {
-    const productData = {
-      productName: "Mì tôm hảo hảo ly",
-      description: "Thanh toán đơn hàng",
-      returnUrl: "http://localhost:3030/success",
-      cancelUrl: "http://localhost:3030",
-      price: 2000,
-    };
-
-    try {
-      const response = await fetch(
-        "https://spring-render-c3hj.onrender.com/create-payment-link",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(productData),
-        }
-      );
-
-      console.log("Response status:", response.status); // Kiểm tra mã trạng thái
-
-      // Đọc phản hồi dưới dạng văn bản
-      const textResponse = await response.text();
-      console.log("Raw response:", textResponse); // In ra phản hồi thô
-
-      //   // Kiểm tra xem phản hồi có phải là JSON không
-      //   let data;
-      //   try {
-      //     data = JSON.parse(textResponse); // Cố gắng phân tích cú pháp JSON
-      //   } catch (error) {
-      //     console.error("Lỗi phân tích cú pháp JSON:", error);
-      //     console.error("Phản hồi không hợp lệ:", textResponse);
-      //     return; // Kết thúc nếu không thể phân tích cú pháp
-      //   }
-
-      //   // Kiểm tra dữ liệu trả về
-      //   console.log("Response data:", data); // Kiểm tra dữ liệu trả về
-
-      //   // Kiểm tra xem có trường link không
-      if (textResponse) {
-        window.location.href = textResponse; // Chuyển hướng tới đường dẫn
-      } else {
-        console.error("Link không tồn tại trong dữ liệu trả về");
-      }
-    } catch (error) {
-      console.error("Có lỗi xảy ra:", error);
-    }
-  };
+ 
 
   return (
     <div className="md:px-14 p-4 max-w-s mx-auto space-y-10" id="about">

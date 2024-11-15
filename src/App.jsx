@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Features from "./components/Features";
@@ -12,8 +17,9 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Route for the root path */}
         <Route
-          path="/"
+          path="/*"
           element={
             <>
               <Navbar />
@@ -26,7 +32,6 @@ function App() {
             </>
           }
         />
-        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
