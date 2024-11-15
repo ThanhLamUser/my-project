@@ -19,7 +19,7 @@ function App() {
       <Routes>
         {/* Route for the root path */}
         <Route
-          path="/"
+          path="*"
           element={
             <>
               <Navbar />
@@ -32,8 +32,6 @@ function App() {
             </>
           }
         />
-        {/* Redirect all other paths to "/" */}
-        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
