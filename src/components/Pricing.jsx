@@ -6,11 +6,11 @@ import { FadeIn } from "../variants";
 const Pricing = () => {
   const checkOut = async () => {
     const productData = {
-      productName: "Mì tôm hảo hảo ly",
+      productName: "Khóa Học Start",
       description: "Thanh toán đơn hàng",
-      returnUrl: "https://tailwind-react-alpha.vercel.app//success",
+      returnUrl: "https://tailwind-react-alpha.vercel.app/success",
       cancelUrl: "https://tailwind-react-alpha.vercel.app/",
-      price: 2000,
+      price: 1000,
     };
 
     try {
