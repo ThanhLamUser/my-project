@@ -19,7 +19,7 @@ const Navbar = () => {
     ]
     return (
         <>
-        <nav className='flex justify-between border-b bg-white md:px-14 p-4 max-w-screen-xl mx-auto text-primary font-semibold fixed top-0 right-0 left-0'>
+        <nav className='flex justify-between border-b bg-white md:px-14 p-4 mx-auto text-primary font-semibold fixed top-0 right-0 left-0'>
          <div className='flex justify-between md:items-center'>
             <div className='md:flex '>
                 <a href="/" ><img className='w-32 md:w-64 md:mr-12 ' src={logo} alt="logo" /></a>
