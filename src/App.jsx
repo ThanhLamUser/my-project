@@ -12,6 +12,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Route for the root path */}
         <Route
           path="/"
           element={
@@ -26,7 +27,8 @@ function App() {
             </>
           }
         />
-        <Route path="*" element={<Navigate to="/" />} />
+        {/* Redirect all other paths to "/" */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
