@@ -102,7 +102,7 @@ const Pricing = () => {
         variants={FadeIn('up', 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
+        viewport={{ once: false, amount: 0.1 }}
         className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-8 md:w-11/12 mx-auto">
         {
           packages.map((pkg, index) => <div className="border py-10 md:px-6 px-4 rounded-lg shadow-3xl" key={index}>
