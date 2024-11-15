@@ -19,7 +19,7 @@ function App() {
       <Routes>
         {/* Route for the root path */}
         <Route
-          path="*"
+          path="/*"
           element={
             <>
               <Navbar />
