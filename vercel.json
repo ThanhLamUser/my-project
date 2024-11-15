@@ -1,9 +1,12 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/success",
+      "destination": "/success"
+    },
+    {
+      "source": "/",
+      "destination": "/"
+    }
+  ]
+}
