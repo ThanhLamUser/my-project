@@ -10,7 +10,7 @@ const Pricing = () => {
         productName: "Khóa Học Start",
         description: "Thanh toán đơn hàng",
         returnUrl: "https://tailwind-react-alpha.vercel.app/success",
-        cancelUrl: "https://tailwind-react-alpha.vercel.app/",
+        cancelUrl: "https://tailwind-react-alpha.vercel.app/cancel",
         price: 1000,
       };
     } else if (count === 2) {
@@ -18,7 +18,7 @@ const Pricing = () => {
         productName: "Khóa Học Advanced",
         description: "Thanh toán đơn hàng",
         returnUrl: "https://tailwind-react-alpha.vercel.app/success",
-        cancelUrl: "https://tailwind-react-alpha.vercel.app/",
+        cancelUrl: "https://tailwind-react-alpha.vercel.app/cancel",
         price: 2000,
       };
     } else {
@@ -26,7 +26,7 @@ const Pricing = () => {
         productName: "Khóa Học Premium",
         description: "Thanh toán đơn hàng",
         returnUrl: "https://tailwind-react-alpha.vercel.app/success",
-        cancelUrl: "https://tailwind-react-alpha.vercel.app/",
+        cancelUrl: "https://tailwind-react-alpha.vercel.app/cancel",
         price: 3000,
       };
     }

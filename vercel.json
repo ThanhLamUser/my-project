@@ -1,22 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/success/:path*", 
-      "destination": "/success",  
-      "permanent": true
-    },
-    {
-      "source": "/:path*",        
-      "destination": "/",         
-      "has": [
-        {
-          "type": "query",
-          "key": "cancel"
-        }
-      ],
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/success",
