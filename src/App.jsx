@@ -17,6 +17,7 @@ import Footer from "./shared/Footer";
 import RootLayout from "./pages/RootLayout";
 import LandingPage from "./pages/LandingPage";
 import OrderSuccess from "./pages/OrderSuccess";
+import OrderFailed from "./pages/OrderFailed";
 
 function App() {
   const router = createBrowserRouter([
@@ -31,6 +32,10 @@ function App() {
         {
           path: "/success",
           element: <OrderSuccess></OrderSuccess>
+        },
+        {
+          path: "/cancel",
+          element: <OrderFailed></OrderFailed>
         }
       ],
     },

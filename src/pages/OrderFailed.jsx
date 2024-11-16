@@ -20,8 +20,6 @@ const OrderFailed = () => {
     'Thay đổi ý định mua hàng',
     'Giá cả không phù hợp',
     'Phương thức thanh toán không phù hợp',
-    'Thời gian giao hàng quá lâu',
-    'Phí vận chuyển cao',
     'Khác'
   ];
 
@@ -32,15 +30,13 @@ const OrderFailed = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-orange-50 flex items-center justify-center p-4 animate-fade-in">
+    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-orange-50 flex items-center justify-center p-4 animate-fade-in pt-36 pb-16 font-sans">
       <div className="w-full max-w-md bg-white/70 backdrop-blur-md rounded-2xl shadow-xl p-6 md:p-8 border border-white/20">
         <div className="flex flex-col items-center relative">
           {/* Error Animation Circle */}
           <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-r from-red-400 to-rose-500 rounded-full flex items-center justify-center mb-6 shadow-lg animate-pulse">
             <XCircle className="w-12 h-12 md:w-14 md:h-14 text-white" />
           </div>
-          
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-400 via-rose-500 to-red-500 rounded-t-2xl" />
           
           <h1 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-rose-500 mb-2 text-center">
             Đặt hàng không thành công
