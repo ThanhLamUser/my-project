@@ -33,8 +33,8 @@ const Pricing = () => {
 
     try {
       const response = await fetch(
-        // "https://spring-render-c3hj.onrender.com/create-payment-link",
-        "http://localhost:8080/create-payment-link",
+        "https://spring-render-c3hj.onrender.com/create-payment-link",
+        // "http://localhost:8080/create-payment-link",
 
         {
           method: "POST",
