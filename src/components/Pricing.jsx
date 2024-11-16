@@ -17,10 +17,8 @@ const Pricing = () => {
       var productData = {
         productName: "Khóa Học Advanced",
         description: "Thanh toán đơn hàng",
-        // returnUrl: "https://tailwind-react-alpha.vercel.app/success",
-        // cancelUrl: "https://tailwind-react-alpha.vercel.app/cancel",
-        returnUrl: "http://localhost:5173/success",
-        cancelUrl: "http://localhost:5173/cancel",
+        returnUrl: "https://tailwind-react-alpha.vercel.app/success",
+        cancelUrl: "https://tailwind-react-alpha.vercel.app/cancel",
         price: 2000,
       };
     } else {
