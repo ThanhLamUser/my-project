@@ -27,24 +27,24 @@ function App() {
       children: [
         {
           path: "/",
-          element: <LandingPage></LandingPage>
+          element: <LandingPage></LandingPage>,
         },
         {
           path: "/success",
-          element: <OrderSuccess></OrderSuccess>
+          element: <OrderSuccess></OrderSuccess>,
         },
         {
           path: "/cancel",
-          element: <OrderFailed></OrderFailed>
-        }
+          element: <OrderFailed></OrderFailed>,
+        },
       ],
     },
   ]);
   return (
     <>
-      <RouterProvider router={router} id ="root" />
+      <RouterProvider router={router} id="root" />
     </>
-  )
+  );
 }
 
 export default App;
